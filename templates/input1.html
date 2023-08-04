@@ -1,0 +1,79 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Best College Recommender for 10th passed student</h1>
+   
+       <form action="{{ url_for('predict_data')}}" method="post">
+        <h1>
+            <legend>College Recommender</legend>
+        </h1>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Maths Score out of 100</label>
+            <input class="form-control" type="number" name="Maths"
+                placeholder="Enter your Maths score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Science Score out of 100</label>
+            <input class="form-control" type="number" name="Science"
+                placeholder="Enter your Science score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">History Score out of 100</label>
+            <input class="form-control" type="number" name="History"
+                placeholder="Enter your History score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Geography Score out of 100</label>
+            <input class="form-control" type="number" name="Geography"
+                placeholder="Enter your Geography score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Language Score out of 100</label>
+            <input class="form-control" type="number" name="Language"
+                placeholder="Enter your Language Score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-control" name="Gender" placeholder="Enter you Gender" required>
+                <option class="placeholder" selected disabled value="">Select your Gender</option>
+                <option value="Male">
+                    Male
+                </option>
+                <option value="Female">
+                    Female
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Locality</label>
+            <select class="form-control" name="Locality" placeholder="Enter you Locality" required>
+                <option class="placeholder" selected disabled value="">Select Locality</option>
+                <option value="Nashik">
+                    Nashik
+                </option>
+                <option value="Pune">
+                    Pune
+                </option>
+                <option value="Mumbai">
+                    Mumbai
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Budget</label>
+            <input class="form-control" type="number" name="Budget"
+                placeholder="Enter your Budget" min='0' max='90000' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Get Your Best College" required />
+        </div>
+    </form>
+    <h2>
+       {{results}}
+    </h2>
+    <h2>
+        Not happy with your score, consult with our career expert with a click of button!
+     </h2>
+   <body>
+</html>
